@@ -30,7 +30,7 @@ $(document).ready(function () {
             method: "GET"
         }).then(function (city) {
             $("#cityName").text(city.name + moment().format(" (M/D/YYYY) "))
-            $("#icon").append($("<img>", {
+            $("#icon").html($("<img>", {
                 src: "https://openweathermap.org/img/wn/" + city.weather[0].icon + ".png",
                 alt: city.weather[0].description
             }))

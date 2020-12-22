@@ -30,9 +30,10 @@ $(document).ready(function () {
             method: "GET"
         }).then(function (city) {
             $("#cityName").text(city.name + moment().format(" (M/D/YYYY) "))
-            $("#icon").append($("<img>", { 
-                src: "http://openweathermap.org/img/wn/" + city.weather[0].icon + ".png", 
-                alt: city.weather[0].description }))
+            $("#icon").append($("<img>", {
+                src: "https://openweathermap.org/img/wn/" + city.weather[0].icon + ".png",
+                alt: city.weather[0].description
+            }))
             $("#temp").text(city.main.temp)
             $("#humidity").text(city.main.humidity)
             $("#wind-speed").text(city.wind.speed)
@@ -58,9 +59,10 @@ $(document).ready(function () {
                 $(".forecast").append($("<div>", { class: "card bg-primary", id: "forecast" + i }))
                 $("#forecast" + i).append($("<div>", { class: "card-body p-2 pr-4", id: i }))
                 $("#" + i).append($("<h5>", { class: "card-title", text: moment().add(i, "days").format("M/D/YYYY") }))
-                $("#" + i).append($("<img>", { 
-                    src: "http://openweathermap.org/img/wn/" + city.list[i].weather[0].icon + ".png", 
-                    alt: city.list[i].weather[0].description }))
+                $("#" + i).append($("<img>", {
+                    src: "https://openweathermap.org/img/wn/" + city.list[i].weather[0].icon + ".png",
+                    alt: city.list[i].weather[0].description
+                }))
                 $("#" + i).append($("<p>", { class: "card-text", text: "Temp: " + city.list[i].main.temp + String.fromCharCode(32, 176, 70) }))
                 $("#" + i).append($("<p>", { class: "card-text", text: "Humidity: " + city.list[i].main.humidity + String.fromCharCode(37) }))
             }

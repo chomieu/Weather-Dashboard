@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+    <header class="bg-dark text-center text-white py-2">
+        <h1>Weather Dashboard</h1>
+    </header>
+
+    <!-- Main acts as a container -->
+    <main class="container">
+        <section class="row">
+            <!-- Aside holds the search form and history list on the left side -->
+            <aside class="col-3 bg-light">
+                <!-- Form accepts city input from the user -->
+                <form class="form-inline py-2">
+                    <h5>Search for a City:</h5>
+                    <input class="form-control w-75">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                </form>
+                <ul class="list-group w-100 my-2">
+                    <!-- Search history list goes here -->
+                </ul>
+            </aside>
+            <!-- Article holds the weather and forecast sections -->
+            <article class="col-9">
+                <!-- Weather section displays current weather conditions of the city -->
+                <section class="card my-3 px-3 py-4">
+                    <h3 class="card-title">
+                        <span id="cityName"></span>
+                        <span id="icon"></span>
+                    </h3>
+                    <p class="card-text">Temperature: <span id="temp"></span> &#8457;</p>
+                    <p class="card-text">Humidity: <span id="humidity"></span>%</p>
+                    <p class="card-text">Wind Speed: <span id="wind-speed"></span> MPH</p>
+                    <p class="card-text">UV Index: <span class="rounded px-2 py-1" id="uv-index"></span></p>
+                </section>
+                <h4>5-Day Forecast:</h4>
+                <!-- Forecast section displays 5-day forecast for the city -->
+                <section class="row text-white justify-content-between px-3 forecast">
+                    <!-- Forecast cards go here -->
+                </section>
+            </article>
+        </section>
+    </main>
+
+    <!-- Includes Bootstrap, jQuery, Moment, and script.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+        integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

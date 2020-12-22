@@ -55,7 +55,7 @@ $(document).ready(function () {
             method: "GET"
         }).then(function (city) {
             $(".forecast").empty()
-            for (i = 0; i < 5; i++) {
+            for (i = 1; i < 6; i++) {
                 $(".forecast").append($("<div>", { class: "card bg-primary", id: "forecast" + i }))
                 $("#forecast" + i).append($("<div>", { class: "card-body p-2 pr-4", id: i }))
                 $("#" + i).append($("<h5>", { class: "card-title", text: moment().add(i, "days").format("M/D/YYYY") }))
